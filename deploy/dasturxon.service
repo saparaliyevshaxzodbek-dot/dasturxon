@@ -1,0 +1,18 @@
+# Linux server: /etc/systemd/system/dasturxon.service
+# Copy the publish folder to /var/www/dasturxon, then:
+#   sudo systemctl enable --now dasturxon
+[Unit]
+Description=Dasturxon restaurant system
+After=network.target
+
+[Service]
+WorkingDirectory=/var/www/dasturxon
+ExecStart=/usr/bin/dotnet /var/www/dasturxon/Restaurant.WebApi.dll
+Restart=always
+RestartSec=10
+User=www-data
+Environment=ASPNETCORE_ENVIRONMENT=Production
+Environment=ASPNETCORE_URLS=http://localhost:5000
+
+[Install]
+WantedBy=multi-user.target

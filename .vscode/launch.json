@@ -1,0 +1,42 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Sayt + API (F5)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/src/Restaurant.WebApi/bin/Debug/net10.0/Restaurant.WebApi.dll",
+      "cwd": "${workspaceFolder}/src/Restaurant.WebApi",
+      "env": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ASPNETCORE_URLS": "http://localhost:5011",
+        "ASPNETCORE_HOSTINGSTARTUPASSEMBLIES": "Microsoft.AspNetCore.SpaProxy"
+      },
+      "serverReadyAction": {
+        "action": "openExternally",
+        "pattern": "Now listening on",
+        "uriFormat": "http://localhost:5011"
+      },
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Faqat API (Swagger)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/src/Restaurant.WebApi/bin/Debug/net10.0/Restaurant.WebApi.dll",
+      "cwd": "${workspaceFolder}/src/Restaurant.WebApi",
+      "env": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ASPNETCORE_URLS": "http://localhost:5011"
+      },
+      "serverReadyAction": {
+        "action": "openExternally",
+        "pattern": "Now listening on",
+        "uriFormat": "http://localhost:5011/swagger"
+      },
+      "console": "integratedTerminal"
+    }
+  ]
+}

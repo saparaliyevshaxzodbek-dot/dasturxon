@@ -1,0 +1,17 @@
+{
+  "dotnet.defaultSolution": "RestaurantSystem.sln",
+  "files.exclude": {
+    "**/bin": true,
+    "**/obj": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/Migrations": true
+  },
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "editor.formatOnSave": false,
+  "typescript.preferences.importModuleSpecifier": "relative"
+}

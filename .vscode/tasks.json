@@ -1,0 +1,28 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build",
+      "type": "process",
+      "command": "dotnet",
+      "args": ["build", "${workspaceFolder}/src/Restaurant.WebApi/Restaurant.WebApi.csproj"],
+      "problemMatcher": "$msCompile",
+      "group": { "kind": "build", "isDefault": true }
+    },
+    {
+      "label": "Saytni ishga tushirish (backend + frontend)",
+      "type": "shell",
+      "command": "${workspaceFolder}/Ishga-tushirish.bat",
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "Testlar",
+      "type": "process",
+      "command": "dotnet",
+      "args": ["test", "${workspaceFolder}/tests/Restaurant.Tests"],
+      "problemMatcher": "$msCompile",
+      "group": "test"
+    }
+  ]
+}
