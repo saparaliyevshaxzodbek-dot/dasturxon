@@ -486,3 +486,6 @@ $RECYCLE.BIN/
 src/Restaurant.WebApi/wwwroot/uploads/*
 !src/Restaurant.WebApi/wwwroot/uploads/.gitkeep
 src/Restaurant.Web/dist/
+
+# TypeScript incremental build info
+*.tsbuildinfo
